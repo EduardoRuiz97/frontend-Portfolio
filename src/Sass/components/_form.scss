@@ -1,0 +1,49 @@
+@use '../mixins';
+@use '../variables';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+    
+
+    input, textarea {
+      border: none;
+      width: 100%;
+      outline: none;
+      padding: 1em;
+      font-size: variables.$Montserrat;
+      font-weight: 500;
+      background-color: transparent;
+      border-bottom: 1px solid variables.$LightGray;
+      color: variables.$LightGray;
+      font-size: 1em;
+
+
+      &::placeholder {
+        color: variables.$LightGray;
+        font-weight: 700;
+        opacity: 0.5;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+  button {
+    align-self: flex-end;
+    @include mixins.ButtonNoBg()
+  }
+}

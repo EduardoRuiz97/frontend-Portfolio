@@ -1,0 +1,203 @@
+@use './mixins';
+@use './variables';
+
+//*------------------Main---------------------*/
+
+.main {
+
+  &__intro {
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    @include mixins.Container();
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      gap: 1em;
+
+      h1 {
+        @include mixins.Titles()
+      }
+
+      span {
+        width: 90%;
+        @include mixins.Paragraphs();
+      }
+
+      button {
+        @include mixins.ButtonNoBg()
+      }
+      
+
+
+      @media only screen and (min-width: 996px) {
+        width: 80%;
+        margin-right: auto;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1.5em;
+      }
+    }
+
+    &__img-container {
+
+      width: 100%;
+      display: block;
+
+      &__layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 70%;
+
+
+          @media only screen and (min-width: 996px) {
+            width: 375px;
+          }
+        }
+      }
+    }
+
+
+    @media only screen and (min-width: 996px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+
+      
+    }
+    
+  }
+
+  hr {
+    display: block;
+    width: 100%;
+    color: variables.$LightGray;
+    font-size: 20px;
+    margin: 3% 0
+  }
+
+  &__projects {
+    @include mixins.Container();
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 50px;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        @include mixins.Titles();
+      }
+
+      a {
+        button {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          @include mixins.ButtonNoBg();
+
+          .icon {
+            color: variables.$LightGray;
+            font-size: 30px;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 777px) {
+        flex-direction: row;
+      }
+    }
+  }
+
+}
+
+.footer {
+  background-color: variables.$VeryDarkGray;
+  @include mixins.Container();
+  margin-top: 5%;
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+
+    &__text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+
+      h1 {
+        @include mixins.Titles();
+      }
+
+      p {
+        @include mixins.Paragraphs();
+      }
+
+      %__container {
+        width: 100%;
+      }
+    }
+
+
+    @media only screen and (min-width: 996px) {
+      flex-direction: row;
+      align-items: flex-start;
+
+      &__text {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+
+      &__container {
+        width: 45%;
+      }
+    } 
+
+
+  }
+
+  hr {
+    display: block;
+    width: 100%;
+    color: variables.$LightGray;
+    font-size: 20px;
+    margin: 5% 0
+  }
+
+
+  &__links {
+    width: 50%;
+    margin: auto;
+
+    @media only screen and (min-width: 1200px) {
+      width: 30%;
+    }
+  }
+}

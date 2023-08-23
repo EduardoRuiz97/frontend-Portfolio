@@ -1,0 +1,35 @@
+@use '../mixins';
+@use '../variables';
+
+.header {
+  @include mixins.Container();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+
+  span {
+    color: variables.$LightGray;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: variables.$OpenSans;
+  }
+
+  &__container { 
+    width: 50%;
+
+    @media only screen and (min-width: 996px) {
+      width: 30%;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      width: 20%;
+    }
+  }
+
+
+
+  
+}

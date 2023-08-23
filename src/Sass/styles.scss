@@ -1,0 +1,12 @@
+@use './reset';
+
+@use './main';
+
+
+//*-----------components---------------*/
+
+@use './components/Header';
+@use './components/Navbar';
+@use './components/projects';
+@use './components/Item';
+@use './components/form';

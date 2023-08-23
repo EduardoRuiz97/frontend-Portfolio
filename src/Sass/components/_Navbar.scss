@@ -1,0 +1,26 @@
+@use '../variables';
+
+.navbar {
+
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      a {
+        color: variables.$LightGray;
+        font-size: 30px;
+        transition: 0.3s;
+
+        &:hover {
+          color: variables.$SkyBlue;
+        }
+      }
+    }
+    
+  }
+}

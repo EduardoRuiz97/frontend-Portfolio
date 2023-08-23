@@ -1,0 +1,24 @@
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+
+
+  @media only screen and (min-width: 777px) {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: unset;
+    row-gap: 3em;
+  }
+
+
+
+  @media only screen and (min-width: 996px) {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+
